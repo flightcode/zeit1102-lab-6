@@ -3,7 +3,15 @@ public class Delivery {
     double[] arrPrices = new double[4];
 
     public static void main(String[] args) {
-        System.out.println(new Delivery().toString());
+        Delivery delivery = new Delivery();
+
+        System.out.println(delivery.toString());
+        delivery.add(0, 0);
+        System.out.println(delivery.toString());
+    }
+
+    public void add(int person, int paper) {
+        arrDelivered[person][paper] = true;
     }
 
     public String toString() {
