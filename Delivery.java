@@ -8,10 +8,16 @@ public class Delivery {
         System.out.println(delivery.toString());
         delivery.add(0, 0);
         System.out.println(delivery.toString());
+        delivery.remove(0, 0);
+        System.out.println(delivery.toString());
     }
 
     public void add(int person, int paper) {
         arrDelivered[person][paper] = true;
+    }
+
+    public void remove(int person, int paper) {
+        arrDelivered[person][paper] = false;
     }
 
     public String toString() {
