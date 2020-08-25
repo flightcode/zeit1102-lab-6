@@ -20,6 +20,17 @@ public class Delivery {
         arrDelivered[person][paper] = false;
     }
 
+    public double getBill(int person) {
+        double output = 0;
+        for (int i = 0; i < arrDelivered[person].length; i++) {
+            if (arrDelivered[person][i]) {
+                output += arrPrices[i];
+            }
+        }
+
+        return output;
+    }
+
     public String toString() {
         String output = "";
 
